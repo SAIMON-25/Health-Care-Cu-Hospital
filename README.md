@@ -48,14 +48,14 @@ Health Care Cu Hospital Management System is a full‑stack DBMS project built t
   - `cors`, `dotenv`
 
 - **Database**
-  - MySQL database `jobra_hospital` (schema included in `database.sql`)
+  - MySQL database `health_care_cu` (schema included in `database.sql`)
 
 ---
 
 ## 3. Project Structure (High Level)
 
 ```text
-Jobra-Hospital-6th-Semester-Project/
+Health-Care-Cu-Hospital/
 ├─ frontend/
 │  ├─ public/           # CRA public assets
 │  ├─ src/
@@ -71,34 +71,34 @@ Jobra-Hospital-6th-Semester-Project/
 │  │  ├─ config/, models/  # DB connection & query helpers
 │  │  └─ server.js         # Express app entry point
 │  └─ package.json
-└─ database.sql         # Full MySQL schema for jobra_hospital
+└─ database.sql        
 ```
 
 ---
 
 ## 4. Database Design (Summary)
 
-The MySQL schema is defined in `database.sql` and creates the `jobra_hospital` database with the following main tables:
+The MySQL schema is defined in `database.sql` and creates the `Health_care_cu` database with the following main tables:
 
-- **`jh_admins`**
+- **`admins`**
   - Stores admin users (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `admin_phone`, `role`, `created_at`).
 
-- **`jh_doctors`**
+- **`doctors`**
   - Stores doctors (`doctor_id`, `doctor_name`, `doctor_email`, `doctor_password`, `doctor_phone`, `department`, `qualification`, `experience`, `chamber_time`, `role`).
 
-- **`jh_patients`**
+- **`patients`**
   - Stores patients (`patient_id`, `patient_name`, `patient_email`, `patient_password`, `patient_phone`, `age`, `gender`, `blood_group`, `address`, `role`).
 
-- **`jh_appointments`**
+- **`appointments`**
   - Stores appointments between doctors and patients (`appointment_id`, `doctor_id`, `patient_id`, `appointment_date`, `appointment_time`, `status`) with foreign keys to `jh_doctors` and `jh_patients`.
 
-- **`jh_reports`**
+- **`reports`**
   - Stores medical reports (`report_id`, `doctor_id`, `patient_id`, `diagnosis`, `prescription`, `medical_test`, `advice`, `report_date`) with foreign keys to `jh_doctors` and `jh_patients`.
 
-- **`jh_complaints`**
+- **`complaints`**
   - Stores patient complaints (`complaint_id`, `patient_id`, `doctor_id`, `message`, `complaint_type`, `complaint_date`, `status`) with foreign keys to patients and optional doctors.
 
-- **`jh_logins`**
+- **`logins`**
   - Generic login table (`login_id`, `email`, `password`, `role`, `ref_id`) for mapping credentials to a referenced user.
 
 Refer to `database.sql` for exact column types and constraints.
@@ -128,7 +128,7 @@ cd Jobra-Hospital-6th-Semester-Project
 SOURCE path/to/database.sql;
 ```
 
-This creates the `jobra_hospital` database and all required tables.
+This creates the `Health_care_cu` database and all required tables.
 
 ---
 
@@ -146,10 +146,10 @@ PORT=5000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
-DB_NAME=jobra_hospital
+DB_NAME=health_care_cu
 ```
 
-> Note: In the current code, the JWT secret is hard‑coded as `"jobra_secret_key"` in `utils/jwt.js` and `middleware/auth.js`. For production, you should move this to an environment variable (e.g. `JWT_SECRET`) and update the code accordingly.
+> Note: In the current code, the JWT secret is hard‑coded as `"health_care_cu_secret_key"` in `utils/jwt.js` and `middleware/auth.js`. For production, you should move this to an environment variable (e.g. `JWT_SECRET`) and update the code accordingly.
 
 Start the backend server:
 
