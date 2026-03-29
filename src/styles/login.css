@@ -1,0 +1,67 @@
+.auth-page.login-page {
+  padding: 2rem 1rem;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid #eadfbe;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 42px rgba(92, 74, 40, 0.14);
+}
+
+.login-form-section {
+  padding: 30px 28px;
+}
+
+.login-form-inner {
+  width: 100%;
+}
+
+.login-logo-wrap {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.login-logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffdf7;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid #eadfbe;
+  margin-bottom: 10px;
+}
+
+.login-logo {
+  height: 90px;
+  width: auto;
+}
+
+.login-brand,
+.login-heading {
+  font-weight: 700;
+  color: #9a6f1f;
+}
+
+.login-heading {
+  margin: 0 0 8px;
+}
+
+.login-subtitle,
+.login-footer {
+  color: #7f6940;
+}
+
+.login-footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.login-footer a {
+  color: #9a6f1f;
+  font-weight: 600;
+}

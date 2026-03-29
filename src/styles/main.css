@@ -1,0 +1,102 @@
+:root {
+  --primary-color: #b98a2f;
+  --secondary-color: #fff9eb;
+  --text-color: #2f2517;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-radius: 14px;
+  --shadow: rgba(92, 74, 40, 0.16);
+  --transition: 0.25s ease;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dashboard-card {
+  border: 1px solid #eadfbe;
+  border-radius: var(--border-radius);
+  padding: 1.2rem;
+  text-decoration: none;
+  color: var(--text-color);
+  background: linear-gradient(150deg, #fffdf8, #fff6df);
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  border-color: #cfa64a;
+  box-shadow: 0 12px 24px var(--shadow);
+}
+
+.dashboard-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.dashboard-links a {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  color: #fffdf7;
+  background: linear-gradient(180deg, #cfac58, #b98a2f);
+}
+
+.dashboard-links a:hover {
+  filter: brightness(1.04);
+}
+
+.admin-page,
+.doctor-bg,
+.patient-bg {
+  min-height: calc(100vh - 64px);
+  padding: 1.5rem;
+  display: grid;
+  place-items: start center;
+}
+
+.admin-title,
+.dashboard-title {
+  color: #9a6f1f;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.alert-success {
+  background: #edf9ea;
+  border: 1px solid #bdddaa;
+}
+
+.alert-error {
+  background: #fff1ee;
+  border: 1px solid #efc3bc;
+}
+
+.admin-form,
+.appointment-form,
+.report-form,
+.auth-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.admin-form button,
+.appointment-form button,
+.report-form button,
+.auth-form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 220px;
+}
