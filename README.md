@@ -116,7 +116,7 @@ Refer to `database.sql` for exact column types and constraints.
 
 ```bash
 git clone <your-repo-url>
-cd Jobra-Hospital-6th-Semester-Project
+cd Health-Care-Cu-Hospital
 ```
 
 ### 5.3 Set Up the Database
