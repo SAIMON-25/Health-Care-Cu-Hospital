@@ -1,10 +1,10 @@
 this is my database , it is also uploaded on the sql like the same 
 i have written it here again to give you an idea of my database
 
-CREATE DATABASE jobra_hospital;
-USE jobra_hospital;
+CREATE DATABASE health_care_cu;
+USE health_care_cu;
 
-CREATE TABLE jh_admins (
+CREATE TABLE admins (
     admin_id INT PRIMARY KEY AUTO_INCREMENT,
     admin_name VARCHAR(100) NOT NULL,
     admin_email VARCHAR(100) UNIQUE NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE jh_admins (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE jh_doctors (
+CREATE TABLE doctors (
     doctor_id INT PRIMARY KEY AUTO_INCREMENT,
     doctor_name VARCHAR(100) NOT NULL,
     doctor_email VARCHAR(100) UNIQUE NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE jh_doctors (
     role VARCHAR(20) DEFAULT 'doctor'
 );
 
-CREATE TABLE jh_patients (
+CREATE TABLE patients (
     patient_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_name VARCHAR(100) NOT NULL,
     patient_email VARCHAR(100) UNIQUE NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE jh_patients (
     role VARCHAR(20) DEFAULT 'patient'
 );
 
-CREATE TABLE jh_appointments (
+CREATE TABLE appointments (
     appointment_id INT PRIMARY KEY AUTO_INCREMENT,
     doctor_id INT,
     patient_id INT,
@@ -55,7 +55,7 @@ CREATE TABLE jh_appointments (
         ON DELETE CASCADE
 );
 
-CREATE TABLE jh_reports (
+CREATE TABLE reports (
     report_id INT PRIMARY KEY AUTO_INCREMENT,
     doctor_id INT,
     patient_id INT,
@@ -72,7 +72,7 @@ CREATE TABLE jh_reports (
         ON DELETE CASCADE
 );
 
-CREATE TABLE jh_complaints (
+CREATE TABLE complaints (
     complaint_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_id INT,
     doctor_id INT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE jh_complaints (
         ON DELETE CASCADE
 );
 
-CREATE TABLE jh_logins (
+CREATE TABLE logins (
     login_id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(100) NOT NULL,
