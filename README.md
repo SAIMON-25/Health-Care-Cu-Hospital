@@ -1,6 +1,5 @@
-# Jobra Hospital Management System
-
-Jobra Hospital Management System is a full‑stack DBMS project built to digitalize core hospital workflows for a small/medium clinic. It supports separate experiences for **admin**, **doctor**, and **patient** users, covering authentication, appointments, reports, and complaints.
+# Health Care Cu Hospital
+Health Care Cu Hospital Management System is a full‑stack DBMS project built to digitalize core hospital workflows for a small/medium clinic. It supports separate experiences for **admin**, **doctor**, and **patient** users, covering authentication, appointments, reports, and complaints.
 
 ---
 
@@ -210,7 +209,7 @@ npm run start:full
 ## 9. Future Improvements
 
 - Move JWT secret and DB credentials fully to environment variables.
-- Add more validations and error handling on both frontend and backend.
+- Add more validations and error handling on both the frontend and backend.
 - Add pagination/search for large lists of doctors, patients, and appointments.
 - Implement richer analytics for admins (e.g., appointment statistics, complaint trends).
 
@@ -218,4 +217,4 @@ npm run start:full
 
 ## 10. License
 
-This project is created as an academic/semester DBMS project. You may reuse and modify it for learning and educational purposes.
+This project was created as an academic/semester DBMS project. You may reuse and modify it for learning and educational purposes.
